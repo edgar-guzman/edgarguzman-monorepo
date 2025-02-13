@@ -1,0 +1,26 @@
+{
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": true,
+
+    "typescript.locale": "en",
+    "typescript.format.enable": true,
+    "typescript.autoClosingTags": true,
+    "typescript.preferences.quoteStyle": "single",
+
+    "explorer.compactFolders": false,
+
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.sortImports": "explicit",
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.format": "explicit"
+    },
+
+    "eslint.enable": true,
+    "eslint.validate": ["typescript"],
+
+    "tailwindCSS.experimental.classRegex": [
+        ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+    ]
+}
