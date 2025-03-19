@@ -1,8 +1,8 @@
-import { nextJsConfig } from "@edgarguzman/eslint/next";
+import { eslintNextConfig } from "@edgarguzman/eslint/next";
 
 /** @type {import("eslint").Linter.Config} */
 export default [
-    ...nextJsConfig,
+    ...eslintNextConfig,
     {
         rules: {
             // Eslint
