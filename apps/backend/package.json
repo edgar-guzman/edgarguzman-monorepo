@@ -15,6 +15,7 @@
     },
     "devDependencies": {
         "@edgarguzman/eslint": "workspace:*",
+        "@edgarguzman/next": "workspace:*",
         "@edgarguzman/tailwind": "workspace:*",
         "@edgarguzman/typescript": "workspace:*",
         "@types/node": "^20",
