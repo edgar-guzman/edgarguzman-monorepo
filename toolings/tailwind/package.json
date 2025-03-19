@@ -1,0 +1,15 @@
+{
+    "name": "@edgarguzman/tailwind",
+    "version": "0.0.0",
+    "private": true,
+    "exports": {
+        ".": "./tailwind.config.ts"
+    },
+    "files": [
+        "."
+    ],
+    "devDependencies": {
+        "@edgarguzman/typescript": "workspace:*",
+        "tailwindcss": "^3.4.17"
+    }
+}
