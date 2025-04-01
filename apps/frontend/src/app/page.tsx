@@ -1,9 +1,9 @@
-import type { Metadata, NextPage } from "next";
+import type { Metadata, NextPage } from 'next';
 
 export function metadata(): Metadata {
     return {
         title: {
-            absolute: "Edgar Guzman",
+            absolute: 'Edgar Guzman',
         },
     };
 }

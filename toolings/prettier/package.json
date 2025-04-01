@@ -1,0 +1,16 @@
+{
+  "name": "@edgarguzman/prettier",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./prettier.config.mjs"
+  },
+  "files": [
+    "."
+  ],
+  "scripts": {
+    "check": "prettier \"../../apps/**/*.+(ts|tsx)\" --ignore-path .prettierignore",
+    "format": "prettier \"../../apps/**/*.+(ts|tsx)\" --ignore-path .prettierignore --write"
+  },
+  "devDependencies": {}
+}
