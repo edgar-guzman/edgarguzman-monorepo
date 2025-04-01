@@ -39,6 +39,9 @@ importers:
       '@edgarguzman/tailwind':
         specifier: workspace:*
         version: link:../../toolings/tailwind
+      '@edgarguzman/types':
+        specifier: workspace:*
+        version: link:../../packages/types
       '@edgarguzman/typescript':
         specifier: workspace:*
         version: link:../../toolings/typescript
@@ -88,6 +91,9 @@ importers:
       '@edgarguzman/tailwind':
         specifier: workspace:*
         version: link:../../toolings/tailwind
+      '@edgarguzman/types':
+        specifier: workspace:*
+        version: link:../../packages/types
       '@edgarguzman/typescript':
         specifier: workspace:*
         version: link:../../toolings/typescript
@@ -114,6 +120,22 @@ importers:
         version: 3.4.17(ts-node@10.9.2(@types/node@20.17.17)(typescript@5.7.3))
       typescript:
         specifier: ^5
+        version: 5.7.3
+
+  packages/types:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+    devDependencies:
+      '@edgarguzman/typescript':
+        specifier: workspace:*
+        version: link:../../toolings/typescript
+      '@types/react':
+        specifier: ^18.2.0
+        version: 18.3.18
+      typescript:
+        specifier: ^5.7.2
         version: 5.7.3
 
   toolings/eslint:

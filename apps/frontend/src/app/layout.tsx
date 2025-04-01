@@ -1,11 +1,10 @@
 import '@/styles/globals.css';
 
+import type { ChildrenProps } from '@edgarguzman/types/children';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 
-interface RootLayoutProps {
-    children: React.ReactNode;
-}
+interface RootLayoutProps extends ChildrenProps {}
 
 const inter = Inter({
     subsets: ['latin'],
