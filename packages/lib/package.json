@@ -1,0 +1,17 @@
+{
+    "name": "@edgarguzman/lib",
+    "version": "0.0.0",
+    "private": true,
+    "exports": {
+        "./*": "./src/*.ts"
+    },
+    "files": [
+        "src"
+    ],
+    "devDependencies": {
+        "@edgarguzman/eslint": "workspace:*",
+        "@edgarguzman/typescript": "workspace:*",
+        "eslint": "^8.57.0",
+        "typescript": "^5.7.2"
+    }
+}

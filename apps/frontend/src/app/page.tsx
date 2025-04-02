@@ -1,3 +1,4 @@
+import { subtract } from '@edgarguzman/lib/math/sub-tract';
 import type { Metadata, NextPage } from 'next';
 
 export function metadata(): Metadata {
@@ -13,6 +14,8 @@ const Home: NextPage = async () => {
         <main>
             <hgroup>
                 <h1>Frontend - Web / Public</h1>
+
+                <p>{subtract(1, 2)}</p>
             </hgroup>
         </main>
     );
