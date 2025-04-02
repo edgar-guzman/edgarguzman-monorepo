@@ -8,10 +8,6 @@
   "files": [
     "src"
   ],
-  "scripts": {
-    "dev": "tsc -w",
-    "start": "tsc"
-  },
   "dependencies": {
     "react": "^18.2.0"
   },
