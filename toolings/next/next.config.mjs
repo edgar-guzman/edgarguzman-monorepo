@@ -9,6 +9,8 @@ export const nextJsConfig = {
     },
     transpilePackages: [
         "@edgarguzman/eslint",
+        "@edgarguzman/next",
+        "@edgarguzman/prettier",
         "@edgarguzman/tailwind",
         "@edgarguzman/typescript",
     ],

@@ -1,11 +1,5 @@
 {
     "version": "2.0.0",
-    "presentation": {
-        "echo": false,
-        "reveal": "always",
-        "focus": false,
-        "panel": "dedicated",
-        "showReuseMessage": true
-    },
+    "presentation": {},
     "tasks": []
 }

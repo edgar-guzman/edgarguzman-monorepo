@@ -9,16 +9,14 @@ export function metadata(): Metadata {
     };
 }
 
-const Home: NextPage = async () => {
-    return (
+const Home: NextPage = () => (
         <main>
-            <hgroup>
+            <div>
                 <h1>Frontend - Web / Public</h1>
 
                 <p>{subtract(1, 2)}</p>
-            </hgroup>
+            </div>
         </main>
     );
-};
 
 export default Home;

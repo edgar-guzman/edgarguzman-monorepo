@@ -3,8 +3,6 @@
 import { includeIgnoreFile } from "@eslint/compat";
 import js from "@eslint/js";
 import configPrettier from "eslint-config-prettier/flat";
-import pluginCheckFile from "eslint-plugin-check-file";
-import pluginN from "eslint-plugin-n";
 import onlyWarn from "eslint-plugin-only-warn";
 import turboPlugin from "eslint-plugin-turbo";
 import path from "node:path";
@@ -37,32 +35,13 @@ export const eslintConfig = [
             // Turbo
             "turbo/no-undeclared-env-vars": "warn",
 
-            // N
-            "n/no-process-env": "error",
-
-            // Check File
-            "check-file/filename-naming-convention": [
-      "error",
-      {
-        "**/*.{ts,tsx}": "KEBAB_CASE"
-      },
-      {
-        "ignoreMiddleExtensions": true
-      }
-    ],
-            "check-file/folder-naming-convention": [
-                "error",
-                {
-                    "src/**/!^[.*]": "KEBAB_CASE"
-                },
-            ],
+            // Typescript Eslint
+            "@typescript-eslint/no-empty-object-type": "error"
         },
     },
     {
         plugins: {
             onlyWarn,
-            pluginCheckFile,
-            pluginN,
         },
     },
     configPrettier,

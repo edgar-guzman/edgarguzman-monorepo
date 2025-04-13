@@ -8,8 +8,7 @@
         "build": {
             "dependsOn": ["^build"],
             "inputs": ["$TURBO_DEFAULT$", ".env*"],
-            "outputs": [".next/**", "!.next/cache/**"],
-            "env": ["NEXT_PUBLIC_NESTJS_SERVER"]
+            "outputs": [".next/**", "!.next/cache/**"]
         },
         "start": {
             "dependsOn": ["^start"]

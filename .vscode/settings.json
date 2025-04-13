@@ -1,31 +1,40 @@
 {
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": false,
-    "editor.formatOnType": true,
+    // Typescript
+    "typescript.tsdk": "node_modules/typescript/lib",
+
+    // Editor Format
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-
-    "typescript.locale": "en",
-    "typescript.format.enable": true,
-    "typescript.autoClosingTags": true,
-    "typescript.preferences.quoteStyle": "single",
-
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
-    "explorer.compactFolders": false,
+    "editor.formatOnSave": true,
+    // "editor.formatOnPaste": false,
+    // "editor.formatOnType": false,
 
     "editor.codeActionsOnSave": {
-        "source.fixAll": "explicit",
-        "source.sortImports": "explicit",
-        "source.fixAll.eslint": "always",
-        "source.fixAll.format": "explicit"
+        "source.fixAll": "always",
+        // "source.sortImports": "never",
+        // "source.fixAll.eslint": "never",
+        // "source.fixAll.format": "never",
+        "source.organizeImports": "always",
+        // "source.addMissingImports.ts": "never"
     },
 
+    // Explorer
+    "explorer.compactFolders": false,
+
+    // Eslint
     "eslint.enable": true,
     "eslint.validate": ["typescript"],
 
+    // Prettier
+    "prettier.enable": true,
+    "prettier.requireConfig": true,
+    "prettier.configPath": "../toolings/prettier.config.mjs",
+
+    // TailwindCSS
     "tailwindCSS.experimental.classRegex": [
         ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-    ]
+    ],
+
+    "files.associations": {
+        "*.css": "tailwindcss"
+    }
 }
