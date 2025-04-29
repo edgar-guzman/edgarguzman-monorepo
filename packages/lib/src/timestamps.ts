@@ -1,4 +1,4 @@
-export const timestamp: {
+export const timestamps: {
     createdAt: true,
     updatedAt: true,
 } = {
