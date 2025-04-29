@@ -28,8 +28,11 @@
         "turborepo"
     ],
     "scripts": {
-        "dev": "turbo dev",
+        "dev": "pnpm db:generate && turbo dev",
         "build": "turbo build",
+        "db:generate": "turbo db:generate",
+        "db:migrate:dev": "turbo db:migrate:dev",
+        "db:studio": "turbo db:studio",
         "start": "turbo start",
         "lint": "turbo lint",
         "generate:component": "turbo generate:component"

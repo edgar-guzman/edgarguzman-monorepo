@@ -1,4 +1,5 @@
 import { subtract } from '@edgarguzman/lib/math/sub-tract';
+import { prisma } from '@edgarguzman/prisma';
 import { Button } from '@edgarguzman/ui/button';
 import type { Metadata, NextPage } from 'next';
 
@@ -13,7 +14,9 @@ export function metadata(): Metadata {
     };
 }
 
-const Home: NextPage = () => {
+const Home: NextPage = async () => {
+    let user = await prisma.user.findFirst();
+
     return (
         <main>
             <div>
@@ -24,6 +27,10 @@ const Home: NextPage = () => {
                 <QuantitySelector />
 
                 <ToastNotification />
+
+                <p className='mb-4'>
+                    {user?.name ?? 'No user added yet'}
+                </p>
 
                 <Button>Howdy Button</Button>
             </div>

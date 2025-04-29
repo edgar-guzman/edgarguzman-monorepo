@@ -1,0 +1,22 @@
+model User {
+    id        String  @id @default(cuid())
+
+    name     String?
+    email    String? @unique
+    image    String?
+    phone    String?
+    password String?
+
+    deleted   Boolean @default(false)
+    terms     Boolean @default(false)
+    published Boolean @default(false)
+
+    role Role @default(User)
+
+    createdAt DateTime  @default(now()) @map("created_at")
+    updatedAt DateTime? @updatedAt @map("updated_at")
+
+    stores Store[]
+
+    @@map("users")
+}
