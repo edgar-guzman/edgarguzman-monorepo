@@ -9,7 +9,7 @@
         "dist"
     ],
     "exports": {
-        "./*": "./src/components1/*.tsx",
+        "./*": "./src/components/*.tsx",
         "./styles/globals.css": "./dist/styles/globals.css"
     },
     "scripts": {

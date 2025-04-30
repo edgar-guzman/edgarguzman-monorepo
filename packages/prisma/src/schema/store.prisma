@@ -1,0 +1,24 @@
+model Store {
+    id     String @id @default(cuid())
+    userId String @map("user_id")
+
+    title       String
+    slug        String  @unique
+    description String? @db.Text
+    image       String?
+
+    deleted  Boolean     @default(false)
+    archived Boolean     @default(false)
+
+    published Publication @default(Active)
+
+    createdAt DateTime  @default(now()) @map("created_at")
+    updatedAt DateTime? @updatedAt @map("updated_at")
+
+    users User @relation(fields: [userId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+
+    products Product[]
+
+    @@index([userId])
+    @@map("stores")
+}

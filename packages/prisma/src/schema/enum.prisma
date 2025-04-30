@@ -1,0 +1,9 @@
+enum Publication {
+    Active
+    Draft
+}
+
+enum Role {
+    User
+    Admin
+}
