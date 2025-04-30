@@ -7,6 +7,7 @@ export default [
         rules: {
             // Eslint
             "prefer-const": "off",
+            'arrow-body-style': ['error', 'always']
         },
     },
 ];

@@ -1,5 +1,9 @@
 import { subtract } from '@edgarguzman/lib/math/sub-tract';
+import { Button } from '@edgarguzman/ui/button';
 import type { Metadata, NextPage } from 'next';
+
+import { QuantitySelector } from '@/components/quantity-selector';
+import { ToastNotification } from '@/components/toast-notification';
 
 export function metadata(): Metadata {
     return {
@@ -10,11 +14,16 @@ export function metadata(): Metadata {
 }
 
 <<<<<<< HEAD
+const Home: NextPage = () => {
+    return (
+=======
+<<<<<<< HEAD
 const Home: NextPage = () => (
 =======
 const Home: NextPage = async () => {
     return (
 <<<<<<< HEAD
+>>>>>>> main
 >>>>>>> main
         <main>
             <div>
@@ -22,6 +31,15 @@ const Home: NextPage = async () => {
 
                 <p>{subtract(1, 2)}</p>
 <<<<<<< HEAD
+
+                <QuantitySelector />
+
+                <ToastNotification />
+
+                <Button>Howdy Button</Button>
+=======
+<<<<<<< HEAD
+>>>>>>> main
             </div>
 =======
             </hgroup>
@@ -36,5 +54,6 @@ const Home: NextPage = async () => {
 >>>>>>> main
         </main>
     );
+};
 
 export default Home;

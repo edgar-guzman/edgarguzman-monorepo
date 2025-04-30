@@ -1,5 +1,8 @@
 import { add } from '@edgarguzman/lib/math/add';
+import { Button } from '@edgarguzman/ui/button';
 import type { Metadata, NextPage } from 'next';
+
+import { ToastNotification } from '@/components/toast-notification';
 
 export function metadata(): Metadata {
     return {
@@ -10,11 +13,16 @@ export function metadata(): Metadata {
 }
 
 <<<<<<< HEAD
+const Home: NextPage = () => {
+    return (
+=======
+<<<<<<< HEAD
 const Home: NextPage = () => (
 =======
 const Home: NextPage = async () => {
     return (
 <<<<<<< HEAD
+>>>>>>> main
 >>>>>>> main
         <main>
             <div>
@@ -22,6 +30,13 @@ const Home: NextPage = async () => {
 
                 <p>{add(1, 2)}</p>
 <<<<<<< HEAD
+
+                <ToastNotification />
+
+                <Button>Howdy Button</Button>
+=======
+<<<<<<< HEAD
+>>>>>>> main
             </div>
 =======
             </hgroup>
@@ -36,5 +51,6 @@ const Home: NextPage = async () => {
 >>>>>>> main
         </main>
     );
+};
 
 export default Home;

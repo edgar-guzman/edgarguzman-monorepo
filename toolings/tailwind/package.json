@@ -9,6 +9,9 @@
     "files": [
         "."
     ],
+    "dependencies": {
+        "tailwindcss-animate": "^1.0.7"
+    },
     "devDependencies": {
         "@edgarguzman/typescript": "workspace:*",
         "tailwindcss": "^3.4.17"

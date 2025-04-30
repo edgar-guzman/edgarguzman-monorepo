@@ -1,8 +1,13 @@
 import '@/styles/globals.css';
+import '@edgarguzman/ui/styles/globals.css';
 
 import type { ChildrenProps } from '@edgarguzman/types/children';
+import { Toaster } from '@edgarguzman/ui/sonner';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
+
+import { ModeToggle } from '@/components/mode-toggle';
+import { ThemeProvider } from '@/components/providers/theme-provider';
 
 type RootLayoutProps = ChildrenProps;
 
@@ -35,7 +40,21 @@ export function metadata(): Metadata {
             default: 'Edgar Guzman',
         },
         description: 'electronic commerce infrastructure in a monorepo',
-        keywords: ['open-source', 'typescript', 'eslint', 'commerce', 'nextjs', 'postgresql', 'prettier', 'prisma', 'tailwindcss', 'trpc', 'next-auth', 'zod', 'turborepo'],
+        keywords: [
+            'open-source',
+            'typescript',
+            'eslint',
+            'commerce',
+            'nextjs',
+            'postgresql',
+            'prettier',
+            'prisma',
+            'tailwindcss',
+            'trpc',
+            'next-auth',
+            'zod',
+            'turborepo',
+        ],
         icons: [
             {
                 rel: 'icon',
@@ -74,10 +93,25 @@ export function metadata(): Metadata {
     };
 }
 
-const RootLayout = ({ children }: RootLayoutProps) => (
+const RootLayout = ({ children }: RootLayoutProps) => {
+    return (
         <html lang='en'>
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className}>
+                <>
+                    <ThemeProvider
+                        attribute='class'
+                        defaultTheme='system'
+                        enableSystem
+                        disableTransitionOnChange
+                    >
+                        <ModeToggle />
+                        {children}
+                        <Toaster />
+                    </ThemeProvider>
+                </>
+            </body>
         </html>
     );
+};
 
 export default RootLayout;
