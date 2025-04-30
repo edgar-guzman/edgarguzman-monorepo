@@ -1,3 +1,5 @@
+// A custom ESLint configuration for libraries that use Next.js.
+
 import js from "@eslint/js";
 import pluginNext from "@next/eslint-plugin-next";
 import pluginReact from "eslint-plugin-react";
@@ -5,15 +7,11 @@ import pluginReactHooks from "eslint-plugin-react-hooks";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
-import { config as baseConfig } from "./base.js";
+import { eslintConfig } from "./root.js";
 
-/**
- * A custom ESLint configuration for libraries that use Next.js.
- *
- * @type {import("eslint").Linter.Config}
- * */
-export const nextJsConfig = [
-    ...baseConfig,
+/** @type {import("eslint").Linter.Config} */
+export const eslintNextConfig = [
+    ...eslintConfig,
     js.configs.recommended,
     ...tseslint.configs.recommended,
     {
