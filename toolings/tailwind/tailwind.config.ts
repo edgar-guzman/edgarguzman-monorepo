@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // we want each package to be responsible for it's own content.
 
 import type { Config } from "tailwindcss";
@@ -95,5 +96,15 @@ export const tailwindCSSConfig: Omit<Config, "content"> = {
             }
         },
     },
+<<<<<<< HEAD
     plugins: [require("tailwindcss-animate")],
+=======
+=======
+import type { Config } from "tailwindcss";
+
+export const tailwindConfig: Omit<Config, "content"> = {
+    theme: {},
+>>>>>>> main
+    plugins: [],
+>>>>>>> main
 };
