@@ -9,14 +9,21 @@ export function metadata(): Metadata {
     };
 }
 
+<<<<<<< HEAD
+const Home: NextPage = () => (
+=======
 const Home: NextPage = async () => {
     return (
 <<<<<<< HEAD
+>>>>>>> main
         <main>
-            <hgroup>
+            <div>
                 <h1>Frontend - Web / Public</h1>
 
                 <p>{subtract(1, 2)}</p>
+<<<<<<< HEAD
+            </div>
+=======
             </hgroup>
 =======
         <main className="flex min-h-screen flex-col items-center justify-center">
@@ -26,8 +33,8 @@ const Home: NextPage = async () => {
                 </h1>
             </div>
 >>>>>>> main
+>>>>>>> main
         </main>
     );
-};
 
 export default Home;

@@ -4,7 +4,7 @@ import type { ChildrenProps } from '@edgarguzman/types/children';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 
-interface RootLayoutProps extends ChildrenProps {}
+type RootLayoutProps = ChildrenProps;
 
 const inter = Inter({
     subsets: ['latin'],
@@ -74,12 +74,10 @@ export function metadata(): Metadata {
     };
 }
 
-const RootLayout = ({ children }: RootLayoutProps) => {
-    return (
+const RootLayout = ({ children }: RootLayoutProps) => (
         <html lang='en'>
             <body className={inter.className}>{children}</body>
         </html>
     );
-};
 
 export default RootLayout;

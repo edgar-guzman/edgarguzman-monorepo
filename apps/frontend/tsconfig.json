@@ -1,22 +1,17 @@
 {
     "extends": "@edgarguzman/typescript/next.json",
     "compilerOptions": {
-        "incremental": true,
-        "plugins": [
-            {
-                "name": "next"
-            }
-        ],
-
         "baseUrl": ".",
         "paths": {
-            "@/*": ["./src/*"],
-            "@/api/v1/*": ["./apps/api/src/*"],
-            "@/v1/*": ["./apps/api/v1/src/*"],
-            "@/backend/*": ["./apps/backend/*"],
-            "@/frontend/*": ["./apps/frontend/*"]
+            "@/*": ["./src/*"]
         }
     },
-    "include": ["src", "next-env.d.ts", ".next/types/**/*.ts"],
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "next-env.d.ts",
+        "next.config.mjs",
+        ".next/types/**/*.ts"
+    ],
     "exclude": ["node_modules"]
 }

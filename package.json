@@ -31,13 +31,11 @@
         "dev": "turbo dev",
         "build": "turbo build",
         "start": "turbo start",
-        "lint": "turbo lint",
-        "gen": "turbo gen"
+        "lint": "turbo lint"
     },
     "devDependencies": {
-        "@turbo/gen": "^2.4.0",
         "turbo": "^2.4.0",
-        "typescript": "^5"
+        "typescript": "^5.7.2"
     },
     "engines": {
         "node": ">=18",
