@@ -1,0 +1,19 @@
+{
+  "name": "@edgarguzman/types",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./*": "./src/*.d.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@edgarguzman/typescript": "workspace:*",
+    "@types/react": "^18.2.0",
+    "typescript": "^5.7.2"
+  }
+}

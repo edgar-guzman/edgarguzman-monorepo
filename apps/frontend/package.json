@@ -20,6 +20,7 @@
 =======
 >>>>>>> main
         "@edgarguzman/tailwind": "workspace:*",
+        "@edgarguzman/types": "workspace:*",
         "@edgarguzman/typescript": "workspace:*",
         "@types/node": "^20",
         "@types/react": "^18",

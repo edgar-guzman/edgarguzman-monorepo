@@ -42,6 +42,9 @@ importers:
       '@edgarguzman/tailwind':
         specifier: workspace:*
         version: link:../../toolings/tailwind
+      '@edgarguzman/types':
+        specifier: workspace:*
+        version: link:../../packages/types
       '@edgarguzman/typescript':
         specifier: workspace:*
         version: link:../../toolings/typescript
@@ -103,6 +106,9 @@ importers:
       '@edgarguzman/tailwind':
         specifier: workspace:*
         version: link:../../toolings/tailwind
+      '@edgarguzman/types':
+        specifier: workspace:*
+        version: link:../../packages/types
       '@edgarguzman/typescript':
         specifier: workspace:*
         version: link:../../toolings/typescript
@@ -140,6 +146,22 @@ importers:
         specifier: ^5
         version: 5.7.3
 
+  packages/types:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+    devDependencies:
+      '@edgarguzman/typescript':
+        specifier: workspace:*
+        version: link:../../toolings/typescript
+      '@types/react':
+        specifier: ^18.2.0
+        version: 18.3.18
+      typescript:
+        specifier: ^5.7.2
+        version: 5.7.3
+
   toolings/eslint:
     devDependencies:
       '@eslint/compat':
@@ -154,6 +176,9 @@ importers:
       eslint:
         specifier: ^8.57.0
         version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^10.1.1
+        version: 10.1.1(eslint@8.57.1)
       eslint-plugin-only-warn:
         specifier: ^1.1.0
         version: 1.1.0
@@ -180,7 +205,12 @@ importers:
         specifier: ^14.2.4
         version: 14.2.24(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
+<<<<<<< HEAD
+  toolings/prettier: {}
+
 =======
+=======
+>>>>>>> main
 >>>>>>> main
   toolings/tailwind:
     devDependencies:
@@ -913,6 +943,12 @@ packages:
     resolution: {integrity: sha512-2NlIDTwUWJN0mRPQOdtQBzbUHvdGY2P1VXSyU83Q3xKxM7WHX2Ql8dKq782Q9TgQUNOLEzEYu9bzLNj1q88I5w==}
     engines: {node: '>=6.0'}
     hasBin: true
+
+  eslint-config-prettier@10.1.1:
+    resolution: {integrity: sha512-4EQQr6wXwS+ZJSzaR5ZCrYgLxqvUjdXctaEtBqHcbkW944B1NQyO4qpdHQbXBONfwxXdkAY81HH4+LUfrg+zPw==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
 
   eslint-plugin-only-warn@1.1.0:
     resolution: {integrity: sha512-2tktqUAT+Q3hCAU0iSf4xAN1k9zOpjK5WO8104mB0rT/dGhOa09582HN5HlbxNbPRZ0THV7nLGvzugcNOSjzfA==}
@@ -3186,6 +3222,10 @@ snapshots:
       esutils: 2.0.3
     optionalDependencies:
       source-map: 0.6.1
+
+  eslint-config-prettier@10.1.1(eslint@8.57.1):
+    dependencies:
+      eslint: 8.57.1
 
   eslint-plugin-only-warn@1.1.0: {}
 

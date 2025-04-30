@@ -1,29 +1,28 @@
-import "@/styles/globals.css";
+import '@/styles/globals.css';
 
-import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import type { ChildrenProps } from '@edgarguzman/types/children';
+import type { Metadata, Viewport } from 'next';
+import { Inter } from 'next/font/google';
 
-interface RootLayoutProps {
-    children: React.ReactNode;
-}
+interface RootLayoutProps extends ChildrenProps {}
 
 const inter = Inter({
-    subsets: ["latin"],
+    subsets: ['latin'],
 });
 
 export function viewport(): Viewport {
     return {
-        width: "device-width",
+        width: 'device-width',
         initialScale: 1,
         maximumScale: 1,
         themeColor: [
             {
-                media: "(prefers-color-scheme: light)",
-                color: "white",
+                media: '(prefers-color-scheme: light)',
+                color: 'white',
             },
             {
-                media: "(prefers-color-scheme: dark)",
-                color: "black",
+                media: '(prefers-color-scheme: dark)',
+                color: 'black',
             },
         ],
     };
@@ -32,66 +31,52 @@ export function viewport(): Viewport {
 export function metadata(): Metadata {
     return {
         title: {
-            template: "%s : Edgar Guzman",
-            default: "Edgar Guzman",
+            template: '%s : Edgar Guzman',
+            default: 'Edgar Guzman',
         },
-        description: "electronic commerce infrastructure in a monorepo",
-        keywords: [
-            "open-source",
-            "typescript",
-            "eslint",
-            "commerce",
-            "nextjs",
-            "postgresql",
-            "prettier",
-            "prisma",
-            "tailwindcss",
-            "trpc",
-            "next-auth",
-            "zod",
-            "turborepo",
-        ],
+        description: 'electronic commerce infrastructure in a monorepo',
+        keywords: ['open-source', 'typescript', 'eslint', 'commerce', 'nextjs', 'postgresql', 'prettier', 'prisma', 'tailwindcss', 'trpc', 'next-auth', 'zod', 'turborepo'],
         icons: [
             {
-                rel: "icon",
-                url: "/images/ed-guz.svg",
+                rel: 'icon',
+                url: '/images/ed-guz.svg',
             },
         ],
         authors: [
             {
-                name: "Edgar Guzman",
+                name: 'Edgar Guzman',
             },
         ],
-        creator: "Edgar Guzman",
-        metadataBase: new URL("https://edgarguzman-frontend.vercel.app"),
+        creator: 'Edgar Guzman',
+        metadataBase: new URL('https://edgarguzman-frontend.vercel.app'),
         openGraph: {
-            type: "website",
-            locale: "en_US",
-            title: "Edgar Guzman",
-            description: "electronic commerce infrastructure in a monorepo",
-            siteName: "Edgar Guzman",
+            type: 'website',
+            locale: 'en_US',
+            title: 'Edgar Guzman',
+            description: 'electronic commerce infrastructure in a monorepo',
+            siteName: 'Edgar Guzman',
             images: [
                 {
-                    url: "/images/opengraph-image.svg",
+                    url: '/images/opengraph-image.svg',
                     width: 1200,
                     height: 630,
-                    alt: "Edgar Guzman",
+                    alt: 'Edgar Guzman',
                 },
             ],
         },
         twitter: {
-            card: "summary_large_image",
-            title: "Edgar Guzman",
-            description: "electronic commerce infrastructure in a monorepo",
-            creator: "@edgaralexisguz",
-            images: ["/images/opengraph-image.svg"],
+            card: 'summary_large_image',
+            title: 'Edgar Guzman',
+            description: 'electronic commerce infrastructure in a monorepo',
+            creator: '@edgaralexisguz',
+            images: ['/images/opengraph-image.svg'],
         },
     };
 }
 
 const RootLayout = ({ children }: RootLayoutProps) => {
     return (
-        <html lang="en">
+        <html lang='en'>
             <body className={inter.className}>{children}</body>
         </html>
     );

@@ -1,0 +1,9 @@
+{
+  "extends": "@edgarguzman/typescript/react.json",
+  "compilerOptions": {
+    "composite": true,
+    "declarationMap": true,
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
