@@ -1,5 +1,11 @@
 {
+<<<<<<< HEAD
     "extends": "@edgarguzman/typescript/base.json",
     "include": ["."],
     "exclude": ["node_modules"]
+=======
+    "extends": "@edgarguzman/typescript/react.json",
+    "include": ["."],
+    "exclude": ["dist", "build", "node_modules"]
+>>>>>>> main
 }
