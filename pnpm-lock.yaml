@@ -33,6 +33,12 @@ importers:
       '@edgarguzman/eslint':
         specifier: workspace:*
         version: link:../../toolings/eslint
+<<<<<<< HEAD
+      '@edgarguzman/next':
+        specifier: workspace:*
+        version: link:../../toolings/next
+=======
+>>>>>>> main
       '@edgarguzman/tailwind':
         specifier: workspace:*
         version: link:../../toolings/tailwind
@@ -50,13 +56,22 @@ importers:
         version: 18.3.5(@types/react@18.3.18)
       autoprefixer:
         specifier: ^10.4.20
+<<<<<<< HEAD
+        version: 10.4.21(postcss@8.5.3)
+=======
         version: 10.4.20(postcss@8.5.2)
+>>>>>>> main
       eslint:
         specifier: ^8.57.0
         version: 8.57.1
       postcss:
+<<<<<<< HEAD
+        specifier: ^8.5.3
+        version: 8.5.3
+=======
         specifier: ^8.5.1
         version: 8.5.2
+>>>>>>> main
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17(ts-node@10.9.2(@types/node@20.17.17)(typescript@5.7.3))
@@ -79,6 +94,12 @@ importers:
       '@edgarguzman/eslint':
         specifier: workspace:*
         version: link:../../toolings/eslint
+<<<<<<< HEAD
+      '@edgarguzman/next':
+        specifier: workspace:*
+        version: link:../../toolings/next
+=======
+>>>>>>> main
       '@edgarguzman/tailwind':
         specifier: workspace:*
         version: link:../../toolings/tailwind
@@ -96,13 +117,22 @@ importers:
         version: 18.3.5(@types/react@18.3.18)
       autoprefixer:
         specifier: ^10.4.20
+<<<<<<< HEAD
+        version: 10.4.21(postcss@8.5.3)
+=======
         version: 10.4.20(postcss@8.5.2)
+>>>>>>> main
       eslint:
         specifier: ^8.57.0
         version: 8.57.1
       postcss:
+<<<<<<< HEAD
+        specifier: ^8.5.3
+        version: 8.5.3
+=======
         specifier: ^8.5.1
         version: 8.5.2
+>>>>>>> main
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17(ts-node@10.9.2(@types/node@20.17.17)(typescript@5.7.3))
@@ -143,14 +173,28 @@ importers:
         specifier: ^8.23.0
         version: 8.24.0(eslint@8.57.1)(typescript@5.7.3)
 
+<<<<<<< HEAD
+  toolings/next:
+    dependencies:
+      next:
+        specifier: ^14.2.4
+        version: 14.2.24(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+
+=======
+>>>>>>> main
   toolings/tailwind:
     devDependencies:
       '@edgarguzman/typescript':
         specifier: workspace:*
         version: link:../typescript
       tailwindcss:
+<<<<<<< HEAD
+        specifier: ^3.4.17
+        version: 3.4.17(ts-node@10.9.2(@types/node@20.17.17)(typescript@5.7.3))
+=======
         specifier: ^4.0.0
         version: 4.0.6
+>>>>>>> main
 
   toolings/typescript: {}
 
@@ -214,10 +258,16 @@ packages:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> main
   '@jridgewell/gen-mapping@0.3.8':
     resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}
     engines: {node: '>=6.0.0'}
 
+<<<<<<< HEAD
+=======
+>>>>>>> main
 >>>>>>> main
   '@jridgewell/resolve-uri@3.1.2':
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
@@ -471,6 +521,9 @@ packages:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> main
   any-promise@1.3.0:
     resolution: {integrity: sha512-7UvmKalWRt1wgjL1RrGxoSJW/0QZFIegpeGvZG9kjp8vrRu55XTHbwnqq2GpXm9uLbcuhxm3IqX9OB4MZR1b2A==}
 
@@ -478,6 +531,9 @@ packages:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
     engines: {node: '>= 8'}
 
+<<<<<<< HEAD
+=======
+>>>>>>> main
 >>>>>>> main
   arg@4.1.3:
     resolution: {integrity: sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==}
@@ -528,8 +584,13 @@ packages:
     resolution: {integrity: sha512-hsU18Ae8CDTR6Kgu9DYf0EbCr/a5iGL0rytQDobUcdpYOKokk8LEjVphnXkDkgpi0wYVsqrXuP0bZxJaTqdgoA==}
     engines: {node: '>= 0.4'}
 
+<<<<<<< HEAD
+  autoprefixer@10.4.21:
+    resolution: {integrity: sha512-O+A6LWV5LDHSJD3LjHYoNi4VLsj/Whi7k6zG12xTYaU4cQ8oxQGckXNX8cRHK5yOZ/ppVHe0ZBXGzSV9jXdVbQ==}
+=======
   autoprefixer@10.4.20:
     resolution: {integrity: sha512-XY25y5xSv/wEoqzDyXXME4AFfkZI0P23z6Fs3YgymDnKJkCGOnkL0iTxCa85UTqaSgfcqyf3UA6+c7wUvx/16g==}
+>>>>>>> main
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
@@ -601,8 +662,13 @@ packages:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
 
+<<<<<<< HEAD
+  caniuse-lite@1.0.30001706:
+    resolution: {integrity: sha512-3ZczoTApMAZwPKYWmwVbQMFpXBDds3/0VciVoUwPUbldlYyVLmRVuRs/PcUZtHpbLRpzzDvrvnFuREsGt6lUug==}
+=======
   caniuse-lite@1.0.30001699:
     resolution: {integrity: sha512-b+uH5BakXZ9Do9iK+CkDmctUSEqZl+SP056vc5usa0PL+ev5OHw003rZXcnjNDv3L8P5j6rwT6C0BPKSikW08w==}
+>>>>>>> main
 
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -782,10 +848,16 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
 <<<<<<< HEAD
+  electron-to-chromium@1.5.120:
+    resolution: {integrity: sha512-oTUp3gfX1gZI+xfD2djr2rzQdHCwHzPQrrK0CD7WpTdF0nPdQ/INcRVjWgLdCT4a9W3jFObR9DAfsuyFQnI8CQ==}
+
+=======
+<<<<<<< HEAD
 =======
   electron-to-chromium@1.5.102:
     resolution: {integrity: sha512-eHhqaja8tE/FNpIiBrvBjFV/SSKpyWHLvxuR9dPTdo+3V9ppdLmFB7ZZQ98qNovcngPLYIz0oOBF9P0FfZef5Q==}
 
+>>>>>>> main
 >>>>>>> main
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -963,6 +1035,11 @@ packages:
     resolution: {integrity: sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==}
     engines: {node: '>=14'}
 
+<<<<<<< HEAD
+  fraction.js@4.3.7:
+    resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
+
+=======
 =======
   foreground-child@3.3.0:
     resolution: {integrity: sha512-Ld2g8rrAyMYFXBhEqMz8ZAHBi4J4uS1i/CxGMDnjyFWddMXLVcDp051DZfu+t7+ab7Wv6SMqpWmyFIj5UbfFvg==}
@@ -971,6 +1048,7 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
+>>>>>>> main
 >>>>>>> main
   fs-extra@10.1.0:
     resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==}
@@ -1322,6 +1400,10 @@ packages:
     resolution: {integrity: sha512-/imKNG4EbWNrVjoNC/1H5/9GFy+tqjGBHCaSsN+P2RnPqjsLmv6UD3Ej+Kj8nBWaRAwyk7kK5ZUc+OEatnTR3A==}
     hasBin: true
 >>>>>>> main
+
+  jiti@1.21.7:
+    resolution: {integrity: sha512-/imKNG4EbWNrVjoNC/1H5/9GFy+tqjGBHCaSsN+P2RnPqjsLmv6UD3Ej+Kj8nBWaRAwyk7kK5ZUc+OEatnTR3A==}
+    hasBin: true
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -1687,8 +1769,13 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
+<<<<<<< HEAD
+  postcss@8.5.3:
+    resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
+=======
   postcss@8.5.2:
     resolution: {integrity: sha512-MjOadfU3Ys9KYoX0AdkBlFEF1Vx37uCCeN4ZHnmwm9FfpbsGWMZeBLMmmpY+6Ocqod7mkdZ0DT31OlbsFrLlkA==}
+>>>>>>> main
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -1995,9 +2082,12 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
+<<<<<<< HEAD
+=======
   tailwindcss@4.0.6:
     resolution: {integrity: sha512-mysewHYJKaXgNOW6pp5xon/emCsfAMnO8WMaGKZZ35fomnR/T5gYnRg2/yRTTrtXiEl1tiVkeRt0eMO6HxEZqw==}
 
+>>>>>>> main
   text-table@0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
 
@@ -2147,8 +2237,13 @@ packages:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
 
+<<<<<<< HEAD
+  update-browserslist-db@1.1.3:
+    resolution: {integrity: sha512-UxhIZQ+QInVdunkDAaiazvvT/+fXL5Osr0JZlJulepYu6Jd7qJtDZjlur0emRlT71EN3ScPoE7gvsuIKKNavKw==}
+=======
   update-browserslist-db@1.1.2:
     resolution: {integrity: sha512-PPypAm5qvlD7XMZC3BujecnaOxwhrtoFR+Dqkk5Aa/6DssiH0ibKoketaj9w8LP7Bont1rYeoV5plxD7RTEPRg==}
+>>>>>>> main
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
@@ -2297,12 +2392,18 @@ snapshots:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> main
   '@jridgewell/gen-mapping@0.3.8':
     dependencies:
       '@jridgewell/set-array': 1.2.1
       '@jridgewell/sourcemap-codec': 1.5.0
       '@jridgewell/trace-mapping': 0.3.25
 
+<<<<<<< HEAD
+=======
+>>>>>>> main
 >>>>>>> main
   '@jridgewell/resolve-uri@3.1.2': {}
 
@@ -2575,6 +2676,9 @@ snapshots:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> main
   any-promise@1.3.0: {}
 
   anymatch@3.1.3:
@@ -2582,6 +2686,9 @@ snapshots:
       normalize-path: 3.0.0
       picomatch: 2.3.1
 
+<<<<<<< HEAD
+=======
+>>>>>>> main
 >>>>>>> main
   arg@4.1.3: {}
 
@@ -2652,6 +2759,16 @@ snapshots:
 
   async-function@1.0.0: {}
 
+<<<<<<< HEAD
+  autoprefixer@10.4.21(postcss@8.5.3):
+    dependencies:
+      browserslist: 4.24.4
+      caniuse-lite: 1.0.30001706
+      fraction.js: 4.3.7
+      normalize-range: 0.1.2
+      picocolors: 1.1.1
+      postcss: 8.5.3
+=======
   autoprefixer@10.4.20(postcss@8.5.2):
     dependencies:
       browserslist: 4.24.4
@@ -2660,6 +2777,7 @@ snapshots:
       normalize-range: 0.1.2
       picocolors: 1.1.1
       postcss: 8.5.2
+>>>>>>> main
       postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.7:
@@ -2695,10 +2813,17 @@ snapshots:
 
   browserslist@4.24.4:
     dependencies:
+<<<<<<< HEAD
+      caniuse-lite: 1.0.30001706
+      electron-to-chromium: 1.5.120
+      node-releases: 2.0.19
+      update-browserslist-db: 1.1.3(browserslist@4.24.4)
+=======
       caniuse-lite: 1.0.30001699
       electron-to-chromium: 1.5.102
       node-releases: 2.0.19
       update-browserslist-db: 1.1.2(browserslist@4.24.4)
+>>>>>>> main
 
   buffer@5.7.1:
     dependencies:
@@ -2735,7 +2860,11 @@ snapshots:
 
   camelcase-css@2.0.1: {}
 
+<<<<<<< HEAD
+  caniuse-lite@1.0.30001706: {}
+=======
   caniuse-lite@1.0.30001699: {}
+>>>>>>> main
 
   chalk@2.4.2:
     dependencies:
@@ -2933,9 +3062,14 @@ snapshots:
   eastasianwidth@0.2.0: {}
 
 <<<<<<< HEAD
+  electron-to-chromium@1.5.120: {}
+
+=======
+<<<<<<< HEAD
 =======
   electron-to-chromium@1.5.102: {}
 
+>>>>>>> main
 >>>>>>> main
   emoji-regex@8.0.0: {}
 
@@ -3234,9 +3368,14 @@ snapshots:
       signal-exit: 4.1.0
 
 <<<<<<< HEAD
+  fraction.js@4.3.7: {}
+
+=======
+<<<<<<< HEAD
 =======
   fraction.js@4.3.7: {}
 
+>>>>>>> main
 >>>>>>> main
   fs-extra@10.1.0:
     dependencies:
@@ -3644,9 +3783,14 @@ snapshots:
       '@pkgjs/parseargs': 0.11.0
 
 <<<<<<< HEAD
+  jiti@1.21.7: {}
+
+=======
+<<<<<<< HEAD
 =======
   jiti@1.21.7: {}
 
+>>>>>>> main
 >>>>>>> main
   js-tokens@4.0.0: {}
 
@@ -3775,7 +3919,7 @@ snapshots:
       '@next/env': 14.2.24
       '@swc/helpers': 0.5.5
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001699
+      caniuse-lite: 1.0.30001706
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.3.1
@@ -3984,29 +4128,53 @@ snapshots:
 
   possible-typed-array-names@1.1.0: {}
 
+<<<<<<< HEAD
+  postcss-import@15.1.0(postcss@8.5.3):
+    dependencies:
+      postcss: 8.5.3
+=======
   postcss-import@15.1.0(postcss@8.5.2):
     dependencies:
       postcss: 8.5.2
+>>>>>>> main
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
       resolve: 1.22.10
 
+<<<<<<< HEAD
+  postcss-js@4.0.1(postcss@8.5.3):
+    dependencies:
+      camelcase-css: 2.0.1
+      postcss: 8.5.3
+
+  postcss-load-config@4.0.2(postcss@8.5.3)(ts-node@10.9.2(@types/node@20.17.17)(typescript@5.7.3)):
+=======
   postcss-js@4.0.1(postcss@8.5.2):
     dependencies:
       camelcase-css: 2.0.1
       postcss: 8.5.2
 
   postcss-load-config@4.0.2(postcss@8.5.2)(ts-node@10.9.2(@types/node@20.17.17)(typescript@5.7.3)):
+>>>>>>> main
     dependencies:
       lilconfig: 3.1.3
       yaml: 2.7.0
     optionalDependencies:
+<<<<<<< HEAD
+      postcss: 8.5.3
+      ts-node: 10.9.2(@types/node@20.17.17)(typescript@5.7.3)
+
+  postcss-nested@6.2.0(postcss@8.5.3):
+    dependencies:
+      postcss: 8.5.3
+=======
       postcss: 8.5.2
       ts-node: 10.9.2(@types/node@20.17.17)(typescript@5.7.3)
 
   postcss-nested@6.2.0(postcss@8.5.2):
     dependencies:
       postcss: 8.5.2
+>>>>>>> main
       postcss-selector-parser: 6.1.2
 
   postcss-selector-parser@6.1.2:
@@ -4022,7 +4190,11 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
+<<<<<<< HEAD
+  postcss@8.5.3:
+=======
   postcss@8.5.2:
+>>>>>>> main
     dependencies:
       nanoid: 3.3.8
       picocolors: 1.1.1
@@ -4366,7 +4538,11 @@ snapshots:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.8
       commander: 4.1.1
+<<<<<<< HEAD
+      glob: 10.3.10
+=======
       glob: 10.4.5
+>>>>>>> main
       lines-and-columns: 1.2.4
       mz: 2.7.0
       pirates: 4.0.6
@@ -4403,19 +4579,30 @@ snapshots:
       normalize-path: 3.0.0
       object-hash: 3.0.0
       picocolors: 1.1.1
+<<<<<<< HEAD
+      postcss: 8.5.3
+      postcss-import: 15.1.0(postcss@8.5.3)
+      postcss-js: 4.0.1(postcss@8.5.3)
+      postcss-load-config: 4.0.2(postcss@8.5.3)(ts-node@10.9.2(@types/node@20.17.17)(typescript@5.7.3))
+      postcss-nested: 6.2.0(postcss@8.5.3)
+=======
       postcss: 8.5.2
       postcss-import: 15.1.0(postcss@8.5.2)
       postcss-js: 4.0.1(postcss@8.5.2)
       postcss-load-config: 4.0.2(postcss@8.5.2)(ts-node@10.9.2(@types/node@20.17.17)(typescript@5.7.3))
       postcss-nested: 6.2.0(postcss@8.5.2)
+>>>>>>> main
       postcss-selector-parser: 6.1.2
       resolve: 1.22.10
       sucrase: 3.35.0
     transitivePeerDependencies:
       - ts-node
 
+<<<<<<< HEAD
+=======
   tailwindcss@4.0.6: {}
 
+>>>>>>> main
   text-table@0.2.0: {}
 
   thenify-all@1.6.0:
@@ -4570,7 +4757,11 @@ snapshots:
 
   universalify@2.0.1: {}
 
+<<<<<<< HEAD
+  update-browserslist-db@1.1.3(browserslist@4.24.4):
+=======
   update-browserslist-db@1.1.2(browserslist@4.24.4):
+>>>>>>> main
     dependencies:
       browserslist: 4.24.4
       escalade: 3.2.0

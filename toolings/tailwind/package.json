@@ -5,11 +5,20 @@
     "exports": {
         ".": "./tailwind.config.ts"
     },
+<<<<<<< HEAD
+    "files": [
+        "."
+    ],
+    "devDependencies": {
+        "@edgarguzman/typescript": "workspace:*",
+        "tailwindcss": "^3.4.17"
+=======
     "scripts": {
         "lint": "eslint . --fix"
     },
     "devDependencies": {
         "@edgarguzman/typescript": "workspace:*",
         "tailwindcss": "^4.0.0"
+>>>>>>> main
     }
 }

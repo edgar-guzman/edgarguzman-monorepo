@@ -1,11 +1,15 @@
+import { nextJsConfig } from "@edgarguzman/next";
+
 /** @type {import("next").NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-    typescript: {
-        ignoreBuildErrors: true,
-    },
-    eslint: {
-        ignoreDuringBuilds: true,
+    ...nextJsConfig,
+    async rewrites() {
+        return [
+            {
+                source: "/static/:path*",
+                destination: "/not-found",
+            },
+        ];
     },
 };
 
