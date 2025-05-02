@@ -9,7 +9,6 @@
         "lint": "eslint . --fix"
     },
     "dependencies": {
-        "@edgarguzman/auth": "workspace:*",
         "@edgarguzman/lib": "workspace:*",
         "@edgarguzman/ui": "workspace:*",
         "@prisma/client": "^6.6.0",

@@ -6,14 +6,11 @@ import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import Discord from 'next-auth/providers/discord';
 import React from 'react';
-import { z } from 'zod';
+
+import { userEmailAndPasswordSchema } from '../../lib/src/schema/user';
+import type { User } from '../../prisma/src/root';
 
 export type * from '../../types/src/next-auth';
-
-const userEmailAndPasswordSchema = z.object({
-    email: z.string().email(),
-    password: z.string(),
-});
 
 export const options: NextAuthConfig = {
     debug: true,
@@ -24,39 +21,37 @@ export const options: NextAuthConfig = {
         strategy: 'jwt',
     },
     callbacks: {
-        session({ session, token }) {    
-          return {
-            ...session,
-            user: {
-              ...session.user,
-              id: token.id,
-              name: token.name,
-            },
-          };
+        session({ session, token }) {
+            return {
+                ...session,
+                user: {
+                    ...session.user,
+                    id: token.id,
+                    name: token.name,
+                },
+            };
         },
         jwt({ token, user }) {
-          console.log('JWT Callback', {
-            token,
-            user,
-          });
+            console.log('JWT Callback', {
+                token,
+                user,
+            });
 
-          if (user) {
-            let u = user as unknown as any;
+            if (user) {
+                let u = user as unknown as User;
 
-            return {
-              ...token,
-              id: u.id,
-              name: u.name,
-            };
-          }
+                return {
+                    ...token,
+                    ...u,
+                };
+            }
 
-          return token;
+            return token;
         },
-      },
+    },
     providers: [
         Discord,
         Credentials({
-            // text: '',
             credentials: {
                 email: {
                     label: 'Email',
@@ -69,7 +64,7 @@ export const options: NextAuthConfig = {
                 },
             },
             async authorize(credentials) {
-                let credential = userEmailAndPasswordSchema.parse(credentials);
+                let credential = await userEmailAndPasswordSchema.parseAsync(credentials);
 
                 let findUser = await prisma.user.findUnique({
                     where: {
