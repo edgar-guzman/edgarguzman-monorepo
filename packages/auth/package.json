@@ -1,0 +1,13 @@
+{
+    "name": "@edgarguzman/auth",
+    "version": "0.0.0",
+    "private": true,
+    "exports": {
+        ".": "./src/root.ts"
+    },
+    "files": [
+        "src"
+    ],
+    "dependencies": {},
+    "devDependencies": {}
+}

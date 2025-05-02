@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { timestamp } from '../timestamp';
+import { timestamps } from '../timestamps';
 import { Role } from '././enum';
 
 export const userSchema = z.object({
@@ -22,7 +22,7 @@ export const userSchema = z.object({
     updatedAt: z.string().date().nullish(),
 });
 
-const baseSchema = userSchema.omit(timestamp);
+const baseSchema = userSchema.omit(timestamps);
 
 export const createUserSchema = baseSchema;
 
