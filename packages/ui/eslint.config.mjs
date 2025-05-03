@@ -10,7 +10,8 @@ export default [
 			'arrow-body-style': ['error', 'always'],
 
 			// React
-			'react/prop-types': 'off'
+			'react/prop-types': 'off',
+			'react/no-unknown-property': 'off'
 		},
 	},
 ];
