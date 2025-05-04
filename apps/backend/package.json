@@ -9,6 +9,7 @@
         "lint": "eslint . --fix"
     },
     "dependencies": {
+        "@edgarguzman/auth": "workspace:*",
         "@edgarguzman/lib": "workspace:*",
         "@edgarguzman/ui": "workspace:*",
         "@hookform/resolvers": "^5.0.1",

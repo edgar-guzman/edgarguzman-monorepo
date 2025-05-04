@@ -105,8 +105,8 @@ const RootLayout = ({ children }: RootLayoutProps) => {
                         disableTransitionOnChange
                     >
                         <ModeToggle />
-                        {children}
                         <Toaster />
+                        {children}
                     </ThemeProvider>
                 </>
             </body>

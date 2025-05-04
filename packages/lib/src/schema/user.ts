@@ -15,6 +15,7 @@ export const userSchema = z.object({
     deleted: z.boolean().default(false),
     terms: z.boolean().default(false),
     published: z.boolean().default(false),
+    subscribed: z.boolean().default(true),
 
     role: z.string().default(Role.User),
 
@@ -42,4 +43,14 @@ export const updateUserParams = updateUserSchema
 
 export const userIdSchema = baseSchema.pick({
     id: true,
+});
+
+export const userEmailAndPasswordSchema = baseSchema.pick({
+    email: true,
+    password: true,
+});
+
+export const userSubscribedSchema = baseSchema.pick({
+    id: true,
+    subscribed: true,
 });

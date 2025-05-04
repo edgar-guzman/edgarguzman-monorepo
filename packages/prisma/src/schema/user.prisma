@@ -7,9 +7,10 @@ model User {
     phone    String?
     password String?
 
-    deleted   Boolean @default(false)
-    terms     Boolean @default(false)
-    published Boolean @default(false)
+    deleted    Boolean @default(false)
+    terms      Boolean @default(false)
+    published  Boolean @default(false)
+    subscribed Boolean @default(true)
 
     role Role @default(User)
 
