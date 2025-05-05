@@ -42,6 +42,14 @@ export async function POST(request: NextRequest) {
                 status: 400
             });
 
+<<<<<<< HEAD
+        // if (!body.subscribed)
+        //     return new NextResponse('Subscribed is required', {
+        //         status: 400
+        //     });
+
+=======
+>>>>>>> d7915586ef6783feb872b32577e2822ad26ec8a8
         if (!body.published)
             return new NextResponse('Published is required', {
                 status: 400
@@ -62,6 +70,10 @@ export async function POST(request: NextRequest) {
                     deleted: body.deleted,
                     terms: body.terms,
                     published: body.published,
+<<<<<<< HEAD
+                    // subscribed: body.subscribed,
+=======
+>>>>>>> d7915586ef6783feb872b32577e2822ad26ec8a8
                     role: 'User',
                     createdAt: new Date(),
                     updatedAt: null
@@ -85,5 +97,9 @@ export async function POST(request: NextRequest) {
         return new NextResponse('Internal Error', {
             status: 500
         });
+<<<<<<< HEAD
+    }
+=======
     };
+>>>>>>> d7915586ef6783feb872b32577e2822ad26ec8a8
 }
