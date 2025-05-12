@@ -1,10 +1,10 @@
 import { add } from '@edgarguzman/lib/math/add';
-import { prisma } from '@edgarguzman/prisma';
 import { Button } from '@edgarguzman/ui/button';
 import type { Metadata, NextPage } from 'next';
 import Link from 'next/link';
 
 import { ToastNotification } from '@/components/toast-notification';
+import { trpc } from '@/trpc/server';
 
 export function metadata(): Metadata {
     return {
@@ -14,8 +14,12 @@ export function metadata(): Metadata {
     };
 }
 
+export async function fetchStores() {
+  return await trpc.store.all.query();
+}
+
 const Home: NextPage = async () => {
-    let stores = await prisma.store.findMany();
+    let stores = await fetchStores();
 
     return (
         <main>
@@ -27,11 +31,11 @@ const Home: NextPage = async () => {
                 <ToastNotification />
 
                 <div className='mb-4'>
-                    {stores?.map((store, index) => {return (
-                        <div key={index}>
+                    {stores?.map(store => {return (
+                        <div key={store.id}>
                             <h2 className='font-semibold'>{store.title}</h2>
                             <Link className='hover:cursor-pointer cursor-default hover:underline hover:underline-offset-4 no-underline' href={`/${store.id}`} target='_blank'>
-                            View Store
+                                View Store
                             </Link>
                         </div>
                     )}) ?? 'No stores added yet'}

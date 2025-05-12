@@ -23,6 +23,9 @@ importers:
       '@edgarguzman/lib':
         specifier: workspace:*
         version: link:../../packages/lib
+      '@edgarguzman/trpc':
+        specifier: workspace:*
+        version: link:../../packages/trpc
       '@edgarguzman/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -32,6 +35,18 @@ importers:
       '@prisma/client':
         specifier: ^6.6.0
         version: 6.6.0(prisma@6.6.0(typescript@5.7.3))(typescript@5.7.3)
+      '@tanstack/react-query':
+        specifier: ^5.66.0
+        version: 5.75.4(react@18.3.1)
+      '@trpc/client':
+        specifier: ^11.0.0-rc.730
+        version: 11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3)
+      '@trpc/react-query':
+        specifier: ^11.0.0-rc.730
+        version: 11.1.2(@tanstack/react-query@5.75.4(react@18.3.1))(@trpc/client@11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3))(@trpc/server@11.1.2(typescript@5.7.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3)
+      '@trpc/server':
+        specifier: ^11.0.0-rc.730
+        version: 11.1.2(typescript@5.7.3)
       lucide-react:
         specifier: ^0.488.0
         version: 0.488.0(react@18.3.1)
@@ -53,6 +68,9 @@ importers:
       sonner:
         specifier: ^2.0.3
         version: 2.0.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      superjson:
+        specifier: ^2.2.2
+        version: 2.2.2
       zod:
         specifier: ^3.24.2
         version: 3.24.2
@@ -63,9 +81,6 @@ importers:
       '@edgarguzman/next':
         specifier: workspace:*
         version: link:../../toolings/next
-      '@edgarguzman/prisma':
-        specifier: workspace:*
-        version: link:../../packages/prisma
       '@edgarguzman/tailwind':
         specifier: workspace:*
         version: link:../../toolings/tailwind
@@ -108,12 +123,27 @@ importers:
       '@edgarguzman/lib':
         specifier: workspace:*
         version: link:../../packages/lib
+      '@edgarguzman/trpc':
+        specifier: workspace:*
+        version: link:../../packages/trpc
       '@edgarguzman/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       '@prisma/client':
         specifier: ^6.6.0
         version: 6.6.0(prisma@6.6.0(typescript@5.7.3))(typescript@5.7.3)
+      '@tanstack/react-query':
+        specifier: ^5.66.0
+        version: 5.75.4(react@18.3.1)
+      '@trpc/client':
+        specifier: ^11.0.0-rc.730
+        version: 11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3)
+      '@trpc/react-query':
+        specifier: ^11.0.0-rc.730
+        version: 11.1.2(@tanstack/react-query@5.75.4(react@18.3.1))(@trpc/client@11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3))(@trpc/server@11.1.2(typescript@5.7.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3)
+      '@trpc/server':
+        specifier: ^11.0.0-rc.730
+        version: 11.1.2(typescript@5.7.3)
       lucide-react:
         specifier: ^0.488.0
         version: 0.488.0(react@18.3.1)
@@ -132,6 +162,9 @@ importers:
       sonner:
         specifier: ^2.0.3
         version: 2.0.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      superjson:
+        specifier: ^2.2.2
+        version: 2.2.2
     devDependencies:
       '@edgarguzman/eslint':
         specifier: workspace:*
@@ -139,9 +172,6 @@ importers:
       '@edgarguzman/next':
         specifier: workspace:*
         version: link:../../toolings/next
-      '@edgarguzman/prisma':
-        specifier: workspace:*
-        version: link:../../packages/prisma
       '@edgarguzman/tailwind':
         specifier: workspace:*
         version: link:../../toolings/tailwind
@@ -271,6 +301,61 @@ importers:
       prisma:
         specifier: 6.6.0
         version: 6.6.0(typescript@5.7.3)
+      typescript:
+        specifier: ^5.7.2
+        version: 5.7.3
+
+  packages/trpc:
+    dependencies:
+      '@edgarguzman/auth':
+        specifier: workspace:*
+        version: link:../auth
+      '@edgarguzman/prisma':
+        specifier: workspace:*
+        version: link:../prisma
+      '@tanstack/react-query':
+        specifier: ^5.66.0
+        version: 5.75.4(react@18.3.1)
+      '@trpc/client':
+        specifier: ^11.0.0-rc.730
+        version: 11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3)
+      '@trpc/next':
+        specifier: ^11.0.0-rc.730
+        version: 11.1.2(@tanstack/react-query@5.75.4(react@18.3.1))(@trpc/client@11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3))(@trpc/react-query@11.1.2(@tanstack/react-query@5.75.4(react@18.3.1))(@trpc/client@11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3))(@trpc/server@11.1.2(typescript@5.7.3))(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(typescript@5.7.3))(@trpc/server@11.1.2(typescript@5.7.3))(next@14.2.24(react-dom@19.1.0(react@18.3.1))(react@18.3.1))(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(typescript@5.7.3)
+      '@trpc/react-query':
+        specifier: ^11.0.0-rc.730
+        version: 11.1.2(@tanstack/react-query@5.75.4(react@18.3.1))(@trpc/client@11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3))(@trpc/server@11.1.2(typescript@5.7.3))(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(typescript@5.7.3)
+      '@trpc/server':
+        specifier: ^11.0.0-rc.730
+        version: 11.1.2(typescript@5.7.3)
+      next-auth:
+        specifier: ^5.0.0-beta.25
+        version: 5.0.0-beta.27(next@14.2.24(react-dom@19.1.0(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      superjson:
+        specifier: ^2.2.2
+        version: 2.2.2
+      zod:
+        specifier: ^3.24.1
+        version: 3.24.2
+    devDependencies:
+      '@edgarguzman/eslint':
+        specifier: workspace:*
+        version: link:../../toolings/eslint
+      '@edgarguzman/typescript':
+        specifier: workspace:*
+        version: link:../../toolings/typescript
+      '@types/node':
+        specifier: ^22.14.0
+        version: 22.14.1
+      '@types/react':
+        specifier: ^18.2.0
+        version: 18.3.18
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.1
       typescript:
         specifier: ^5.7.2
         version: 5.7.3
@@ -1519,8 +1604,54 @@ packages:
   '@swc/helpers@0.5.5':
     resolution: {integrity: sha512-KGYxvIOXcceOAbEk4bi/dVLEK9z8sZ0uBB3Il5b1rhfClSpcX0yfRO0KmTkqR2cnQDymwLB+25ZyMzICg/cm/A==}
 
+  '@tanstack/query-core@5.75.4':
+    resolution: {integrity: sha512-pcqOUgWG9oGlzkfRQQMMsEFmtQu0wq81A414CtELZGq+ztVwSTAaoB3AZRAXQJs88LmNMk2YpUKuQbrvzNDyRg==}
+
+  '@tanstack/react-query@5.75.4':
+    resolution: {integrity: sha512-Vf65pzYRkf8fk9SP1ncIZjvaXszBhtsvpf+h45Y/9kOywOrVZfBGUpCdffdsVzbmBzmz6TCFes9bM0d3pRrIsA==}
+    peerDependencies:
+      react: ^18 || ^19
+
   '@tootallnate/quickjs-emscripten@0.23.0':
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
+
+  '@trpc/client@11.1.2':
+    resolution: {integrity: sha512-RpifJOAv+ql9gF3oafa3dLCF01AzWu2DzejvehAPG2IlwHxopKoYXaImJ8zPwRkZokuWiKz5v65HjElmi8TlrQ==}
+    peerDependencies:
+      '@trpc/server': 11.1.2
+      typescript: '>=5.7.2'
+
+  '@trpc/next@11.1.2':
+    resolution: {integrity: sha512-dtk8p/al4p5BU4Otol8ufM3sjuJT/1do0wR912OjetRLwG0Y41FTwhUeXcfLpUMjWUWy+dnCwG8aH/sDvLO5RQ==}
+    peerDependencies:
+      '@tanstack/react-query': ^5.59.15
+      '@trpc/client': 11.1.2
+      '@trpc/react-query': 11.1.2
+      '@trpc/server': 11.1.2
+      next: '*'
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+      typescript: '>=5.7.2'
+    peerDependenciesMeta:
+      '@tanstack/react-query':
+        optional: true
+      '@trpc/react-query':
+        optional: true
+
+  '@trpc/react-query@11.1.2':
+    resolution: {integrity: sha512-Ws3oIaj0qqbVIUyfYd9uFBwqk7eRqsxaLhLKN7grskoBo8wkh/CUADcN6ZD+GGogC3Dsg9S4WhgU1jVgfc/ahg==}
+    peerDependencies:
+      '@tanstack/react-query': ^5.67.1
+      '@trpc/client': 11.1.2
+      '@trpc/server': 11.1.2
+      react: '>=18.2.0'
+      react-dom: '>=18.2.0'
+      typescript: '>=5.7.2'
+
+  '@trpc/server@11.1.2':
+    resolution: {integrity: sha512-Oi9zWHG0ZDkbDo4sYkduoV7q4sIe6UwjrRLC91vNMYQK+PVgpbTCmK1laRwewAGu0zaayqcGDosANjceOIC3GA==}
+    peerDependencies:
+      typescript: '>=5.7.2'
 
   '@tsconfig/node10@1.0.11':
     resolution: {integrity: sha512-DcRjDCujK/kCk/cUe8Xz8ZSpm8mS3mNNpta+jGCA6USEDfktlNvm1+IuZ9eTcDbNk41BHwpHHeW+N1lKCz4zOw==}
@@ -1921,6 +2052,10 @@ packages:
 
   constant-case@2.0.0:
     resolution: {integrity: sha512-eS0N9WwmjTqrOmR3o83F5vW8Z+9R1HnVz3xmzT2PMFug9ly+Au/fxRWlEBSb6LcZwspSsEn9Xs1uw9YgzAg1EQ==}
+
+  copy-anything@3.0.5:
+    resolution: {integrity: sha512-yCEafptTtb4bk7GLEQoM8KVJpxAfdBJYaXyzQEgQQQgYrZiDp8SJmGKlYza6CYjEDNstAdNdKA3UuoULlEbS6w==}
+    engines: {node: '>=12.13'}
 
   core-js-pure@3.41.0:
     resolution: {integrity: sha512-71Gzp96T9YPk63aUvE5Q5qP+DryB4ZloUZPSOebGM88VNw8VNfvdA7z6kGA8iGOTEzAomsRidp4jXSmUIJsL+Q==}
@@ -2632,6 +2767,10 @@ packages:
   is-weakset@2.0.4:
     resolution: {integrity: sha512-mfcwb6IzQyOKTs84CQMrOwW4gQcaTOAWJ0zzJCl2WSPDrWk/OzDaImWFH3djXhb24g4eudZfLRozAvPGw4d9hQ==}
     engines: {node: '>= 0.4'}
+
+  is-what@4.1.16:
+    resolution: {integrity: sha512-ZhMwEosbFJkA0YhFnNDgTM4ZxDRsS6HqTo7qsZM08fehyRYIYa0yHu5R6mgo1n/8MgaPBXiPimPD77baVFYg+A==}
+    engines: {node: '>=12.13'}
 
   isarray@2.0.5:
     resolution: {integrity: sha512-xHjhDr3cNBK0BzdUJSPXZntQUx/mwMS5Rw4A7lPJ90XGAO6ISP/ePDNuo0vhqOZU+UD5JoodwCAAoZQd3FeAKw==}
@@ -3445,6 +3584,10 @@ packages:
     resolution: {integrity: sha512-8EbVDiu9iN/nESwxeSxDKe0dunta1GOlHufmSSXxMD2z2/tMZpDMpvXQGsc+ajGo8y2uYUmixaSRUc/QPoQ0GA==}
     engines: {node: '>=16 || 14 >=14.17'}
     hasBin: true
+
+  superjson@2.2.2:
+    resolution: {integrity: sha512-5JRxVqC8I8NuOUjzBbvVJAKNM8qoVuH0O77h4WInc/qC2q5IreqKxYwgkga3PfA22OayK2ikceb/B26dztPl+Q==}
+    engines: {node: '>=16'}
 
   supports-color@5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
@@ -4695,7 +4838,53 @@ snapshots:
       '@swc/counter': 0.1.3
       tslib: 2.8.1
 
+  '@tanstack/query-core@5.75.4': {}
+
+  '@tanstack/react-query@5.75.4(react@18.3.1)':
+    dependencies:
+      '@tanstack/query-core': 5.75.4
+      react: 18.3.1
+
   '@tootallnate/quickjs-emscripten@0.23.0': {}
+
+  '@trpc/client@11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3)':
+    dependencies:
+      '@trpc/server': 11.1.2(typescript@5.7.3)
+      typescript: 5.7.3
+
+  '@trpc/next@11.1.2(@tanstack/react-query@5.75.4(react@18.3.1))(@trpc/client@11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3))(@trpc/react-query@11.1.2(@tanstack/react-query@5.75.4(react@18.3.1))(@trpc/client@11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3))(@trpc/server@11.1.2(typescript@5.7.3))(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(typescript@5.7.3))(@trpc/server@11.1.2(typescript@5.7.3))(next@14.2.24(react-dom@19.1.0(react@18.3.1))(react@18.3.1))(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(typescript@5.7.3)':
+    dependencies:
+      '@trpc/client': 11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3)
+      '@trpc/server': 11.1.2(typescript@5.7.3)
+      next: 14.2.24(react-dom@19.1.0(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+      react-dom: 19.1.0(react@18.3.1)
+      typescript: 5.7.3
+    optionalDependencies:
+      '@tanstack/react-query': 5.75.4(react@18.3.1)
+      '@trpc/react-query': 11.1.2(@tanstack/react-query@5.75.4(react@18.3.1))(@trpc/client@11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3))(@trpc/server@11.1.2(typescript@5.7.3))(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(typescript@5.7.3)
+
+  '@trpc/react-query@11.1.2(@tanstack/react-query@5.75.4(react@18.3.1))(@trpc/client@11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3))(@trpc/server@11.1.2(typescript@5.7.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3)':
+    dependencies:
+      '@tanstack/react-query': 5.75.4(react@18.3.1)
+      '@trpc/client': 11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3)
+      '@trpc/server': 11.1.2(typescript@5.7.3)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      typescript: 5.7.3
+
+  '@trpc/react-query@11.1.2(@tanstack/react-query@5.75.4(react@18.3.1))(@trpc/client@11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3))(@trpc/server@11.1.2(typescript@5.7.3))(react-dom@19.1.0(react@18.3.1))(react@18.3.1)(typescript@5.7.3)':
+    dependencies:
+      '@tanstack/react-query': 5.75.4(react@18.3.1)
+      '@trpc/client': 11.1.2(@trpc/server@11.1.2(typescript@5.7.3))(typescript@5.7.3)
+      '@trpc/server': 11.1.2(typescript@5.7.3)
+      react: 18.3.1
+      react-dom: 19.1.0(react@18.3.1)
+      typescript: 5.7.3
+
+  '@trpc/server@11.1.2(typescript@5.7.3)':
+    dependencies:
+      typescript: 5.7.3
 
   '@tsconfig/node10@1.0.11': {}
 
@@ -5189,6 +5378,10 @@ snapshots:
     dependencies:
       snake-case: 2.1.0
       upper-case: 1.1.3
+
+  copy-anything@3.0.5:
+    dependencies:
+      is-what: 4.1.16
 
   core-js-pure@3.41.0: {}
 
@@ -6075,6 +6268,8 @@ snapshots:
     dependencies:
       call-bound: 1.0.3
       get-intrinsic: 1.2.7
+
+  is-what@4.1.16: {}
 
   isarray@2.0.5: {}
 
@@ -7006,6 +7201,10 @@ snapshots:
       mz: 2.7.0
       pirates: 4.0.6
       ts-interface-checker: 0.1.13
+
+  superjson@2.2.2:
+    dependencies:
+      copy-anything: 3.0.5
 
   supports-color@5.5.0:
     dependencies:
