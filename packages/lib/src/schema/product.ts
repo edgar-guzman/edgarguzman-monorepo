@@ -27,7 +27,7 @@ const baseSchema = productSchema.omit(timestamps);
 
 export const createProductSchema = baseSchema;
 
-export const createUserParams = createProductSchema
+export const createProductParams = createProductSchema
     .extend({})
     .omit({
         id: true,
@@ -43,6 +43,6 @@ export const updateProductParams = updateProductSchema
         storeId: true,
     });
 
-export const userIdSchema = baseSchema.extend({}).pick({
+export const productIdSchema = baseSchema.extend({}).pick({
     id: true,
 });
