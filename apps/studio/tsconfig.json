@@ -1,0 +1,4 @@
+{
+    "extends": "@edgarguzman/typescript/react.json",
+    "exclude": ["node_modules"]
+}
