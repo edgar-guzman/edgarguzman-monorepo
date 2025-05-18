@@ -1,0 +1,16 @@
+{
+  "extends": "@edgarguzman/typescript/next.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+        "@/*": ["./src/*"],
+    },
+  },
+  "include": [
+        "src/**/*.ts",
+        "next-env.d.ts",
+        "next.config.mjs",
+        ".next/types/**/*.ts"
+      ],
+  "exclude": ["node_modules"]
+}

@@ -1,78 +1,32 @@
-<<<<<<< HEAD
-import { userSubscribedSchema } from '@edgarguzman/lib/schema/user'
-import { prisma } from '@edgarguzman/prisma'
-import type { NextRequest } from 'next/server'
-import { NextResponse } from 'next/server'
-
-export async function PUT(request: NextRequest) {
-    try {
-        let body = await userSubscribedSchema.parseAsync(await request.json())
-=======
 import { userSubscribedSchema } from '@edgarguzman/lib/schema/user';
-import { prisma } from '@edgarguzman/prisma';
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
+
+import { trpc } from '@/trpc/server';
 
 export async function PUT(request: NextRequest) {
     try {
         let body = await userSubscribedSchema.parseAsync(await request.json());
->>>>>>> d7915586ef6783feb872b32577e2822ad26ec8a8
 
         if (!body.id)
             return new NextResponse('Id is required', {
                 status: 400
-<<<<<<< HEAD
-            })
-=======
             });
->>>>>>> d7915586ef6783feb872b32577e2822ad26ec8a8
 
         if (!body.subscribed)
             return new NextResponse('Subscribed is required', {
                 status: 400
-<<<<<<< HEAD
-            })
-
-        let updation = await prisma.user.update({
-            where: {
-                id: body.id
-            },
-            data: {
-                subscribed: body.subscribed
-            }
-        })
-
-        return NextResponse.json({
-            message: updation
-        }, {
-            status: 200
-        })
-    } catch (error) {
-        let err = error as Error;
-
-        console.error('[UNSUBSCRIBED_PUT]', err.message);
-        
-        return new NextResponse('Internal Error', {
-            status: 500
-        })
-=======
             });
 
-            let updation = await prisma.user.update({
-                where: {
-                    id: body.id
-                },
-                data: {
-                    subscribed: body.subscribed,
-                    createdAt: undefined,
-                    updatedAt: new Date()
-                }
-            });
+        let updation = await trpc.user.updateSubscribed.mutate({
+            id: body.id,
+            subscribed: body.subscribed
+        });
 
         return NextResponse.json(
             {
-                updation,
-                message: 'Created User Successfully'
+                message: 'Unsubscribed User Successfully',
+                updation
             },
             {
                 status: 200
@@ -86,6 +40,5 @@ export async function PUT(request: NextRequest) {
         return new NextResponse('Internal Error', {
             status: 500
         });
->>>>>>> d7915586ef6783feb872b32577e2822ad26ec8a8
     }
 }

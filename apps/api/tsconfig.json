@@ -1,0 +1,9 @@
+{
+  "extends": "@edgarguzman/typescript/base.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "outDir": "./dist"
+  },
+  "include": ["src"],
+  "exclude": ["dist", "node_modules"]
+}

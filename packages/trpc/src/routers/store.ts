@@ -62,6 +62,28 @@ export const storeRouter = router({
             });
         }),
 
+    updateMany: publicProcedure
+        .input(
+            updateStoreSchema.pick({
+                id: true,
+                userId: true,
+                title: true
+            })
+        )
+        .mutation(async ({ ctx, input }) => {
+            return await ctx.prisma.store.updateMany({
+                where: {
+                    id: input.id,
+                    userId: input.userId
+                },
+                data: {
+                    title: input.title,
+                    createdAt: undefined,
+                    updatedAt: new Date(),
+                },
+            });
+        }),
+
     delete: publicProcedure
         .input(
             storeIdSchema.extend({
@@ -78,6 +100,23 @@ export const storeRouter = router({
                     createdAt: undefined,
                     updatedAt: new Date(),
                 },
+            });
+        }),
+
+    deleteMany: publicProcedure
+        .input(
+            storeIdSchema.extend({
+                userId: z.string().cuid(),
+                deleted: z.boolean().default(false)
+            })
+        )
+        .mutation(async ({ ctx, input }) => {
+            return await ctx.prisma.store.deleteMany({
+                where: {
+                    id: input.id,
+                    userId: input.userId,
+                    deleted: input.deleted
+                }
             });
         })
 });

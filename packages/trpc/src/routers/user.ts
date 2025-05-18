@@ -1,7 +1,7 @@
 import { inferRouterOutputs } from '@trpc/server';
 import { z } from 'zod';
 
-import { createUserParams, updateUserSchema, userIdSchema } from '../../../lib/src/schema/user';
+import { createUserParams, updateUserSchema, userIdSchema, userSubscribedSchema } from '../../../lib/src/schema/user';
 import { publicProcedure } from '../procedure';
 import { router } from '../rpc';
 
@@ -56,6 +56,23 @@ export const userRouter = router({
                     name: input.name,
                     email: input.email,
                     password: input.password,
+                    createdAt: undefined,
+                    updatedAt: new Date(),
+                },
+            });
+        }),
+
+    updateSubscribed: publicProcedure
+        .input(
+            userSubscribedSchema
+        )
+        .mutation(async ({ ctx, input }) => {
+            return await ctx.prisma.user.update({
+                where: {
+                    id: input.id,
+                },
+                data: {
+                    subscribed: input.subscribed,
                     createdAt: undefined,
                     updatedAt: new Date(),
                 },
