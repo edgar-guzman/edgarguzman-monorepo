@@ -14,12 +14,17 @@ export function metadata(): Metadata {
     };
 }
 
+export async function checkHealth() {
+    return await trpc.health.check.query();
+}
+
 export async function fetchStores() {
   return await trpc.store.all.query();
 }
 
 const Home: NextPage = async () => {
     let stores = await fetchStores();
+    let status = await checkHealth();
 
     return (
         <main>
@@ -39,6 +44,16 @@ const Home: NextPage = async () => {
                             </Link>
                         </div>
                     )}) ?? 'No stores added yet'}
+                </div>
+
+                <div className='rounded-lg border border-white p-4 mb-4'>
+                    <h2 className='font-semibold mb-4'>API Status</h2>
+                    <div className='flex items-center gap-2'>
+                        <div className={`h-2 w-2 rounded-full ${status ? 'bg-green-500' : 'bg-red-500'}`} />
+                        <span className='text-sm'>
+                            {status ? 'Checking...' : status ? 'Connected' : 'Disconnected'}
+                        </span>
+                    </div>
                 </div>
 
                 <Button>Howdy Button</Button>

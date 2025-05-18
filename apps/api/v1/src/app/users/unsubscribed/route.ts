@@ -35,7 +35,7 @@ export async function PUT(request: NextRequest) {
     } catch (error) {
         let err = error as Error;
 
-        console.error('[UNSUBSCRIBED_PUT]', err?.message);
+        console.error('[UNSUBSCRIBED_PUT]', err.message);
 
         return new NextResponse('Internal Error', {
             status: 500

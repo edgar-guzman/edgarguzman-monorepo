@@ -1,7 +1,8 @@
 import { createUserParams } from '@edgarguzman/lib/schema/user';
-import { prisma } from '@edgarguzman/prisma';
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
+
+import { trpc } from '@/trpc/server';
 
 export async function POST(request: NextRequest) {
     try {
@@ -32,26 +33,8 @@ export async function POST(request: NextRequest) {
                 status: 400
             });
 
-        if (!body.deleted)
-            return new NextResponse('Deleted is required', {
-                status: 400
-            });
-
         if (!body.terms)
             return new NextResponse('Terms is required', {
-                status: 400
-            });
-
-<<<<<<< HEAD
-        // if (!body.subscribed)
-        //     return new NextResponse('Subscribed is required', {
-        //         status: 400
-        //     });
-
-=======
->>>>>>> d7915586ef6783feb872b32577e2822ad26ec8a8
-        if (!body.published)
-            return new NextResponse('Published is required', {
                 status: 400
             });
 
@@ -60,34 +43,23 @@ export async function POST(request: NextRequest) {
                 status: 400
             });
 
-            let creation = await prisma.user.create({
-                data: {
-                    name: body.name,
-                    email: body.email,
-                    image: body.image,
-                    phone: body.phone,
-                    password: body.password,
-                    deleted: body.deleted,
-                    terms: body.terms,
-                    published: body.published,
-<<<<<<< HEAD
-                    // subscribed: body.subscribed,
-=======
->>>>>>> d7915586ef6783feb872b32577e2822ad26ec8a8
-                    role: 'User',
-                    createdAt: new Date(),
-                    updatedAt: null
-                }
-            });
+        let creation = await trpc.user.create.mutate({
+            name: body.name,
+            email: body.email,
+            image: body.image,
+            phone: body.phone,
+            password: body.password,
+            terms: body.terms
+        });
 
         return NextResponse.json(
             {
-                creation,
-                message: 'Created User Successfully'
+                message: 'Created User Successfully',
+                creation
             },
             {
                 status: 200
-            }
+            },
         );
     } catch (error) {
         let err = error as Error;
@@ -97,9 +69,5 @@ export async function POST(request: NextRequest) {
         return new NextResponse('Internal Error', {
             status: 500
         });
-<<<<<<< HEAD
     }
-=======
-    };
->>>>>>> d7915586ef6783feb872b32577e2822ad26ec8a8
 }

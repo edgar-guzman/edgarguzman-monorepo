@@ -3,13 +3,20 @@ import { NextResponse } from 'next/server';
 import { trpc } from '@/trpc/server';
 
 export async function GET() {
-    try {
-        let list = await trpc.user.all.query();
+  try {
+        let creation = await trpc.store.create.mutate({
+            title: 'CRON TEMP',
+            slug: 'cron-temp'
+        });
+
+        let deletion = await trpc.store.delete.mutate({
+            id: creation.id
+        });
 
         return NextResponse.json(
             {
-                message: 'Getting All Users',
-                list
+                message: 'CRON Keep Alive Route',
+                deletion
             },
             {
                 status: 200
@@ -18,11 +25,10 @@ export async function GET() {
     } catch (error) {
         let err = error as Error;
 
-        console.error('[USERS_GET]', err.message);
+        console.error('[CRON_GET]', err.message);
 
         return new NextResponse('Internal Error', {
             status: 500
         });
     }
 }
-

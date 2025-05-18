@@ -11,7 +11,7 @@ import { SuperJSON } from 'superjson';
 export const trpc = createTRPCClient<AppRouter>({
     links: [
         loggerLink({
-            enabled: (opts) => {
+            enabled(opts) {
                 return (
                     process.env.NODE_ENV === 'development' ||
                     (opts.direction === 'down' && opts.result instanceof Error)
@@ -20,7 +20,7 @@ export const trpc = createTRPCClient<AppRouter>({
         }),
         httpBatchStreamLink({
             transformer: SuperJSON,
-            url: `${fetchBaseUrl()}/api/trpc`,
+            url: `${fetchBaseUrl()}/trpc`,
             headers() {
                 let head = new Headers(headers());
 

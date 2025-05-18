@@ -8,7 +8,7 @@ export async function createContext(request: NextRequest) {
 
 export async function handler(request: NextRequest) {
     return await fetchRequestHandler({
-        endpoint: '/api/trpc',
+        endpoint: '/trpc',
         req: request,
         router: appRouter,
         async createContext() {

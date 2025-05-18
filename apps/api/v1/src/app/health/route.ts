@@ -4,11 +4,11 @@ import { trpc } from '@/trpc/server';
 
 export async function GET() {
     try {
-        let list = await trpc.user.all.query();
+        let list = await trpc.health.check.query();
 
         return NextResponse.json(
             {
-                message: 'Getting All Users',
+                message: 'Checking Up',
                 list
             },
             {
@@ -18,11 +18,10 @@ export async function GET() {
     } catch (error) {
         let err = error as Error;
 
-        console.error('[USERS_GET]', err.message);
+        console.error('[HEALTH_GET]', err.message);
 
         return new NextResponse('Internal Error', {
             status: 500
         });
     }
 }
-

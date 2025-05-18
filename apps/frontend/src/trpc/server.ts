@@ -35,4 +35,3 @@ export const trpc = createTRPCClient<AppRouter>({
 });
 
 export type { RouterInputs, RouterOutputs } from '@edgarguzman/trpc';
-
