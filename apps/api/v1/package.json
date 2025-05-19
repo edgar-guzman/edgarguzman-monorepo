@@ -3,9 +3,15 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
+<<<<<<< HEAD
         "dev": "next dev --turbo -p 3008",
         "build": "next build",
         "start": "next start -p 3008",
+=======
+        "dev": "next dev --turbo -p 3003",
+        "build": "next build",
+        "start": "next start -p 3003",
+>>>>>>> main
         "lint": "eslint . --fix"
     },
     "dependencies": {
