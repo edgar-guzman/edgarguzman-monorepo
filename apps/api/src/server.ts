@@ -3,7 +3,7 @@ import express from 'express';
 import { createProxyMiddleware } from 'http-proxy-middleware';
 
 const apiProxyV1 = createProxyMiddleware({
-  target: 'http://localhost:3003'
+  target: 'http://localhost:3008'
 });
 
 const app = express();
