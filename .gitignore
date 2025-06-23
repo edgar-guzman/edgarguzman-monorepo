@@ -1,0 +1,25 @@
+# dependencies
+node_modules
+
+# env (environment variable)
+.env
+.env.*
+
+# testing
+coverage
+
+# vercel turbo
+.vercel
+.turbo
+
+# build options
+.next
+.out
+build
+dist
+
+# typescript
+*.tsbuildinfo
+
+# misc
+.DS_Store

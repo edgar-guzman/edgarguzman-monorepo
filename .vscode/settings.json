@@ -1,0 +1,19 @@
+{
+    // Typescript
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+
+    // Editor Format/Code Actions
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {},
+
+    // Spellright
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "typescript",
+        "typescriptreact"
+    ]
+}
