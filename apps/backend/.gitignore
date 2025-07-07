@@ -10,18 +10,26 @@ node_modules
 # testing
 coverage
 
+# build options
+.next
+out
+next-env.d.ts
+build
+dist
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
 # vercel turbo
 .vercel
 .turbo
-
-# build options
-.next
-.out
-build
-dist
 
 # typescript
 *.tsbuildinfo
 
 # misc
 .DS_Store
+*.pem
