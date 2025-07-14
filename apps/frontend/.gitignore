@@ -1,0 +1,35 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+
+# env (environment variable)
+.env
+.env*.local
+
+# testing
+coverage
+
+# build options
+.next
+out
+next-env.d.ts
+build
+dist
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# vercel turbo
+.vercel
+.turbo
+
+# typescript
+*.tsbuildinfo
+
+# misc
+.DS_Store
+*.pem

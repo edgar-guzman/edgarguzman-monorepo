@@ -22,7 +22,8 @@ This Turborepo includes the following apps/packages/toolings:
 
 ### Apps (Short for Applications)
 
-There is nothing inside besides a README.md file
+- `backend`: a [Next.js](https://nextjs.org/) app
+- `frontend`: another [Next.js](https://nextjs.org/) app
 
 ### Packages
 
