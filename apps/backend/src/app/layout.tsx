@@ -27,7 +27,11 @@ export function viewport(): Viewport {
             }
         ]
     };
+<<<<<<< HEAD
+}
+=======
 };
+>>>>>>> new-main
 
 const RootLayout = ({ children }: RootLayoutProps) => {
     return (
@@ -36,7 +40,11 @@ const RootLayout = ({ children }: RootLayoutProps) => {
                 {children}
             </body>
         </html>
+<<<<<<< HEAD
+    );
+=======
   );
+>>>>>>> new-main
 };
 
 export default RootLayout
