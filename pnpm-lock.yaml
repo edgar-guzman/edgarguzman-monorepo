@@ -55,6 +55,7 @@ importers:
         specifier: ^5.7.2
         version: 5.8.3
 
+<<<<<<< HEAD
   apps/frontend:
     dependencies:
       lodash.merge:
@@ -98,6 +99,8 @@ importers:
         specifier: ^5.7.2
         version: 5.8.3
 
+=======
+>>>>>>> new-main
 packages:
 
   '@alloc/quick-lru@5.2.0':
